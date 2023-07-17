@@ -1,0 +1,9 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<h1>A Simple Message Bank</h1>
+<nav>
+  <ul>
+    <li><a href="{{ url_for('submit') }}">Submit a message</a></li>
+    <li><a href="{{ url_for('view') }}">View messages</a></li>
+  </ul>
+</nav>
