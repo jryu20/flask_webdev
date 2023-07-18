@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}View Messages{% endblock %}</h1>
+  <h1>{% block title %}Some Cool Messages{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for message in messages %}
+        <p>{{m[1]}}</p>
+        <p>- {{m[0]}}</p>
+        <br>
+    {% endfor %}
+</ul>
+
 {% endblock %}
