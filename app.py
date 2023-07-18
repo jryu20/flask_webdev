@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from flask import redirect, url_for, abort
+from flask import redirect, url_for, abort, g
 import sqlite3
 import numpy as np
 
@@ -27,7 +27,7 @@ def insert_messages(request):
     db.close()
     
 @app.route("/", methods=['POST', 'GET'])
-def render():
+def submit():
     if request.method == 'GET':
         return render_template('submit.html')
     else:
