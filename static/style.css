@@ -1,3 +1,4 @@
+
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   margin: 0;
   padding: 0;
@@ -9,48 +10,58 @@ body {
   color: #333;
 }
 
-.main-content {
-  padding: 20px;
-}
-
 h1 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #007bff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-h2 {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #ff9d00;
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
 }
 
-h3 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #4caf50;
+nav ul {
+  list-style-type: none;
+  text-align: center;
 }
 
-p {
-  margin-bottom: 10px;
-  line-height: 1.5;
+nav li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-a {
-  color: #007bff;
+nav a {
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-a:hover {
-  color: #0056b3;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.button {
+.content {
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.block {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-link,
+.view-link {
   display: inline-block;
   padding: 10px 20px;
   background-color: #007bff;
@@ -59,32 +70,11 @@ a:hover {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-
-.navbar {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-.navbar ul {
-  list-style-type: none;
-}
-
-.navbar li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.navbar a {
-  color: #fff;
   text-decoration: none;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+.submit-link:hover,
+.view-link:hover {
+  background-color: #0056b3;
 }
+
