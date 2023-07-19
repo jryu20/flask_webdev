@@ -7,8 +7,8 @@
 {% block content %}
 <ul>
     {% for message in messages %}
-        <p>{{m[1]}}</p>
-        <p>- {{m[0]}}</p>
+        <p>{{message[2]}}</p>
+        <p>- <em>{{message[1]}}</em></p>
         <br>
     {% endfor %}
 </ul>

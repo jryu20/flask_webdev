@@ -15,7 +15,7 @@ def get_message_db():
         cursor.execute(cmd)
         return g.message_db
 
-def insert_messages(request):
+def insert_message(request):
     db = get_message_db()
     cursor = db.cursor()
     cmd = 'SELECT COUNT(*) FROM messages'
@@ -31,7 +31,9 @@ def submit():
     if request.method == 'GET':
         return render_template('submit.html')
     else:
-        insert_message(request.form)
+        message = request.form['message']
+        handle = request.form['handle']
+        insert_message(request)
         return render_template('submit.html', message=message, handle=handle)
 
 def random_messages(n):
@@ -45,7 +47,7 @@ def random_messages(n):
 
 @app.route('/view/', methods=['POST', 'GET'])
 def view():
-    messages = random_submissions(np.random.randint(1,6))
+    messages = random_messages(np.random.randint(1,6))
     return render_template('view.html', messages=messages)
 
 
